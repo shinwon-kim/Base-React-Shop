@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* top: 112px; */
+  z-index: 100 ; 
+
+  & li{
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+}
+
+
+.drawer-content {
+  max-height: initial !important;
+  min-height: -webkit-fill-available;
+}
+
+.drawer-toggle:checked + .drawer-content {
+  max-height: 100vh !important;
+}
+
+.js-searchedItem:active span {
+  color: white !important;
+}
